@@ -87,7 +87,7 @@ class User(BaseModel):
     
     id: Optional[PyObjectId] = Field(default=None, alias="_id")
     clerk_id: str
-    email: str
+    email: Optional[str]
     name: Optional[str] = None
     avatar_url: Optional[str] = None
     single_page_count: int = 0
@@ -210,3 +210,4 @@ class FeedbackResponse(BaseModel):
     success: bool
     message: str
     feedback_id: Optional[str] = None
+
